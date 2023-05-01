@@ -6,10 +6,10 @@ import Resume from "../assets/Amit_Resume.pdf";
 const Body = () => {
 	return (
 		<>
-			<div className="flex flex-col lg:flex-row lg:h-5/6 mx-40 mt-4 sm:mt-auto sm:mb-10">
+			<div className="flex flex-col lg:flex-row lg:h-5/6 sm:mx-20 lg:mx-40 mt-4 sm:mt-auto sm:mb-28 lg:mb-0">
 				<div className="flex-1">
 					<img
-						className="lg:h-full z-0 sm:pt-14 lg:mt-0"
+						className="z-0 sm:pt-14 lg:pt-0 lg:mt-0"
 						src={profile_img_light}
 						alt="profile_image_light"
 					/>

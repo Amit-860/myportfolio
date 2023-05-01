@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { MenuContext } from "../context/menu.context";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdClose } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
+import { IoClose } from "react-icons/io5";
 
 const MobileMenu = () => {
 	const { isOpen, setIsOpen } = useContext(MenuContext);
@@ -15,7 +15,7 @@ const MobileMenu = () => {
 			{isOpen ? (
 				<>
 					<div className="flex items-center justify-between">
-						<MdClose
+						<IoClose
 							size="1.5rem"
 							className="h-20 w-20 lg:hidden"
 							onClick={toggelMenu}
@@ -25,7 +25,7 @@ const MobileMenu = () => {
 						</div>
 						<div className="w-20" />
 					</div>
-					<div className="absolute top-36 lg:hidden w-full drop-shadow-2xl z-20 py-14 rounded-xl text-gray-900 backdrop-blur-xl bg-white/75">
+					<div className="absolute top-36 lg:hidden w-full drop-shadow-2xl z-20 py-14 rounded-xl text-gray-900 backdrop-blur-md bg-white/75">
 						<ul className="flex flex-col gap-14 items-center text-4xl font-semibold">
 							<li className={style}>Home</li>
 							<li className={style}>Projects</li>
@@ -36,7 +36,7 @@ const MobileMenu = () => {
 			) : (
 				<>
 					<div className="flex items-center justify-between">
-						<GiHamburgerMenu
+						<FiMenu
 							size="1.5rem"
 							className="h-20 w-20 lg:hidden"
 							onClick={toggelMenu}
