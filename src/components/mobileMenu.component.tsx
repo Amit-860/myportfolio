@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { MenuContext } from "../context/menu.context";
+import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 
@@ -11,43 +12,46 @@ const MobileMenu = () => {
 		setIsOpen(!isOpen);
 	};
 	return (
-		<div className="lg:hidden w-full">
+		<div className="w-full md:hidden">
 			{isOpen ? (
 				<>
 					<div className="flex items-center justify-between">
-						<IoClose
-							size="1.5rem"
-							className="h-20 w-20 lg:hidden"
-							onClick={toggelMenu}
-						/>
-						<div className="h-36 w-36 shadow-black shadow-2xl bg-gray-950 text-slate-100 text-5xl flex items-center justify-center rounded-full">
-							AB
-						</div>
-						<div className="w-20" />
+						<IoClose className="h-12 w-12 z-40" onClick={toggelMenu} />
 					</div>
-					<div className="absolute top-36 lg:hidden w-full drop-shadow-2xl z-20 py-14 rounded-xl text-gray-900 backdrop-blur-md bg-white/75">
-						<ul className="flex flex-col gap-14 items-center text-4xl font-semibold">
-							<li className={style}>Home</li>
-							<li className={style}>Projects</li>
-							<li className={style}>About</li>
+					<div className="absolute top-4 left-0 w-screen px-3 z-20">
+						<ul
+							className="font-medium flex flex-col gap-6 items-center text-2xl 
+						drop-shadow-2xl py-8 rounded-lg text-gray-600 backdrop-blur-md
+						 border-gray-200 border-[1px] bg-gray-200/70"
+						>
+							<li className={style}>
+								<Link to="/" onClick={toggelMenu}>
+									Home
+								</Link>
+							</li>
+							<li className={style}>
+								<Link to="/projects" onClick={toggelMenu}>
+									Projects
+								</Link>
+							</li>
+							<li className={style}>
+								<Link to="/about" onClick={toggelMenu}>
+									About
+								</Link>
+							</li>
 						</ul>
 					</div>
 				</>
 			) : (
 				<>
 					<div className="flex items-center justify-between">
-						<FiMenu
-							size="1.5rem"
-							className="h-20 w-20 lg:hidden"
-							onClick={toggelMenu}
-						/>
-						<div className="h-36 w-36 shadow-black shadow-md bg-gray-950 text-slate-100 text-5xl flex items-center justify-center rounded-full">
-							AB
-						</div>
-						<div className="w-20" />
+						<FiMenu className="h-10 w-10" onClick={toggelMenu} />
 					</div>
 				</>
 			)}
+			<div className="z-50 fixed bottom-10 right-10 h-20 w-20 shadow-black shadow-md bg-gray-950 text-slate-100 text-3xl flex items-center justify-center rounded-full">
+				<Link to="/about">AB</Link>
+			</div>
 		</div>
 	);
 };

@@ -4,15 +4,23 @@ import { Link } from "react-router-dom";
 import { TbWorldWww } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 
-const CardLeft = ({
+const CardRight = ({
 	slides,
 	gh,
 	site,
-}: { slides: string[]; gh: boolean | string; site: boolean | string }) => {
+	title,
+	description,
+}: {
+	slides: string[];
+	gh: boolean | string;
+	site: boolean | string;
+	title: string;
+	description: string;
+}) => {
 	return (
-		<div className="flex flex-col lg:flex-row sm:h-[88rem] lg:h-[36.5rem] w-full justify-center items-center my-4">
-			<div className="sm:w-3/4 lg:w-1/2 flex justify-center h-full my-16">
-				<div className="shadow-gray-600 shadow-2xl sm:w-[40rem] lg:w-[28rem]">
+		<div className="w-full flex flex-col md:flex-row justify-center items-center">
+			<div className="w-5/6 m-20 md:w-4/12 flex justify-center my-16">
+				<div className="shadow-gray-600 shadow-2xl">
 					<Carousel>
 						{slides.map((img) => (
 							<img
@@ -25,28 +33,22 @@ const CardLeft = ({
 					</Carousel>
 				</div>
 			</div>
-			<div className="w-1/2 flex flex-col items-center justify-start sm:text-center lg:text-left h-fit mb-8 px-6">
-				<h1 className="text-6xl">Manage - Team & Product Managment App</h1>
-				<p className="sm:hidden lg:block p-6 text-gray-900 ">
-					Manage - team & product management app, built with React and styled
-					with Tailwind CSS, offers a modern and intuitive interface for teams
-					to collaborate and manage their projects. With its robust features and
-					user-friendly design, it streamlines workflow and helps teams achieve
-					their goals.
-				</p>
-				<div className="flex sm:gap-10 lg:gap-4 w-full px-6 sm:justify-center lg:justify-start sm:mb-32 lg:mb-0">
+			<div className="w-full md:w-4/6 flex flex-col items-center justify-center text-center md:text-left h-fit mb-8 px-6">
+				<h1 className="text-4xl md:text-6xl">{title}</h1>
+				<p className="p-4 text-lg text-gray-900 ">{description}</p>
+				<div className="flex gap-4 w-full px-6 justify-center md:justify-start">
 					{site && (
 						<Link
 							to={`${site}`}
 							target="_blank"
 							className="hover:text-teal-800"
 						>
-							<TbWorldWww className="sm:w-20 sm:h-20 sm:mt-12 lg:mt-0 lg:w-8 lg:h-8" />
+							<TbWorldWww className="w-10 h-10 mt-2 md:mt-0 md:w-8 md:h-8" />
 						</Link>
 					)}
 					{gh && (
 						<Link to={`${gh}`} target="_blank" className="hover:text-teal-800">
-							<FaGithub className="sm:w-20 sm:h-20 sm:mt-12 lg:mt-0 lg:w-8 lg:h-8" />
+							<FaGithub className="w-10 h-10 mt-2 md:mt-0 md:w-8 md:h-8" />
 						</Link>
 					)}
 				</div>
@@ -55,4 +57,4 @@ const CardLeft = ({
 	);
 };
 
-export default CardLeft;
+export default CardRight;

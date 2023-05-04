@@ -8,36 +8,42 @@ const CardRight = ({
 	slides,
 	gh,
 	site,
-}: { slides: string[]; gh: boolean | string; site: boolean | string }) => {
+	title,
+	description,
+}: {
+	slides: string[];
+	gh: boolean | string;
+	site: boolean | string;
+	title: string;
+	description: string;
+}) => {
 	return (
-		<div className="flex flex-col-reverse lg:flex-row sm:h-[88rem] lg:h-[36.5rem] w-full justify-center items-center my-4">
-			<div className="w-1/2 flex flex-col items-center justify-end sm:text-center lg:text-right h-fit mb-8 px-6">
-				<h1 className="text-6xl">CRWN Clothing - Online Shopping Store</h1>
-				<p className="sm:hidden lg:block p-6 text-gray-900 ">
-					CRWN Clothing is an full-fledge e-commerce website made with React,
-					Redux, Styled Components and other packages related to React. The app
-					is connected to Firebase as a backend for user autheticaion and
-					storage.
-				</p>
-				<div className="flex sm:gap-10 lg:gap-4 w-full px-6 sm:justify-center lg:justify-end sm:mb-32 lg:mb-0">
+		<div className="w-full flex flex-col-reverse md:flex-row justify-center items-center">
+			<div
+				className="w-full md:w-4/6 flex flex-col items-center justify-center text-center
+			 md:text-right h-fit mb-8 px-4 md:px-16"
+			>
+				<h1 className="text-4xl md:text-6xl">{title}</h1>
+				<p className="p-4 text-lg text-gray-900 ">{description}</p>
+				<div className="flex gap-4 w-full px-6 justify-center md:justify-end">
 					{site && (
 						<Link
 							to={`${site}`}
 							target="_blank"
 							className="hover:text-teal-800"
 						>
-							<TbWorldWww className="sm:w-20 sm:h-20 sm:mt-12 lg:mt-0 lg:w-8 lg:h-8" />
+							<TbWorldWww className="w-10 h-10 mt-2 md:mt-0 md:w-8 md:h-8" />
 						</Link>
 					)}
 					{gh && (
 						<Link to={`${gh}`} target="_blank" className="hover:text-teal-800">
-							<FaGithub className="sm:w-20 sm:h-20 sm:mt-12 lg:mt-0 lg:w-8 lg:h-8" />
+							<FaGithub className="w-10 h-10 mt-2 md:mt-0 md:w-8 md:h-8" />
 						</Link>
 					)}
 				</div>
 			</div>
-			<div className="sm:w-3/4 lg:w-1/2 flex justify-center h-full my-16">
-				<div className="shadow-gray-600 shadow-2xl sm:w-[40rem] lg:w-[28rem]">
+			<div className="w-5/6 m-20 md:w-4/12 flex justify-center my-16">
+				<div className="shadow-gray-600 shadow-2xl">
 					<Carousel>
 						{slides.map((img) => (
 							<img

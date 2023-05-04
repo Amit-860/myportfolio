@@ -6,11 +6,11 @@ import Icons from "./icons.component";
 
 const Header = () => {
 	return (
-		<div className="flex relative place-content-between items-center pt-2 lg:h-24 mx-6 lg:mx-20 sm:h-40">
-			<Menu optStyles="w-32" />
+		<div className="container mx-auto flex relative place-content-between items-center h-24 md:h-40 pt-2 px-4 md:px-10">
 			<MobileMenu />
+			<Menu />
 			<Initials initials="AB" optStyles="" />
-			<Icons optStyles="lg:w-32" />
+			<Icons optStyles="md:w-48" />
 		</div>
 	);
 };

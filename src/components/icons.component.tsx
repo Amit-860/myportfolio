@@ -14,37 +14,25 @@ const Icons = ({
 	const handleClick = () => setTheme((prevTheme) => !prevTheme);
 	return (
 		<div
-			className={`sm:absolute lg:static sm:right-1 sm:top-10 flex sm:gap-6 flex-col lg:flex-row lg:gap-4 ${optStyles}`}
+			className={`flex gap-3 flex-row items-center mt-1 md:mt-0 md:gap-6 ${optStyles}`}
 		>
-			<FaLinkedinIn
-				size={"1.5rem"}
-				className="sm:ml-0 lg:ml-auto cursor-pointer hover:text-teal-700 sm:w-24 sm:h-24 lg:h-6 lg:w-6"
-			/>
-			<FiGithub
-				size={"1.5rem"}
-				className="cursor-pointer hover:text-teal-700 sm:w-24 sm:h-24 lg:h-6 lg:w-6"
-			/>
+			<FaLinkedinIn className="md:mt-1 cursor-pointer hover:text-teal-700 w-10 h-10 md:h-6 md:w-6 text-2xl" />
+			<FiGithub className="cursor-pointer md:mt-1 hover:text-teal-700 w-10 h-10 md:h-6 md:w-6 text-2xl" />
 			{/* rome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<div onClick={handleClick}>
 				{theme ? <TransitionEffect /> : ""}
 				{theme ? "" : <TransitionEffect />}
 				<div
-					className={` h-24 w-24  rounded-2xl lg:rounded-md lg:-mt-1 ${
+					className={`h-12 w-12 md:h-10 md:w-10 rounded-lg -mt-1 ${
 						theme
-							? "bg-slate-200 hover:bg-gray-950 hover:text-slate-200 hover:shadow-gray-500 hover:shadow-2xl"
-							: "bg-gray-950 text-white hover:bg-slate-200 hover:text-gray-950 hover:shadow-gray-500 hover:shadow-2xl"
-					}  flex items-center justify-center lg:w-8 lg:h-8`}
+							? "bg-slate-200 hover:bg-gray-950 shadow-gray-400 shadow-md border-gray-200 border-2 hover:shadow-black hover:shadow-md hover:border-black hover:border-2 hover:text-slate-200"
+							: "bg-gray-950 border-gray-950 border-2 text-white shadow-black shadow-md hover:border-gray-200 hover:border-2 hover:bg-slate-200 hover:text-gray-950 hover:shadow-gray-400 hover:shadow-md"
+					} flex items-center justify-center`}
 				>
 					{theme ? (
-						<BiMoon
-							size={"1.5rem"}
-							className="cursor-pointer sm:w-16 sm:h-16 lg:h-6 lg:w-6"
-						/>
+						<BiMoon className="cursor-pointer text-2xl" />
 					) : (
-						<FiSun
-							size={"1.5rem"}
-							className="cursor-pointer sm:w-16 sm:h-16 lg:h-6 lg:w-6"
-						/>
+						<FiSun className="cursor-pointer text-2xl" />
 					)}
 				</div>
 			</div>

@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Menu = ({ props, optStyles }: { props?: object; optStyles?: string }) => {
 	const location = useLocation();
 	return (
-		<ul className={`hidden lg:flex gap-4 ${optStyles}`}>
+		<ul className="hidden md:flex gap-8 text-lg font-semibold">
 			<li
 				className={`${
 					location.pathname === "/"
