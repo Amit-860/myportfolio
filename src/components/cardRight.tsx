@@ -19,13 +19,10 @@ const CardRight = ({
 }) => {
 	return (
 		<div className="w-full flex flex-col-reverse md:flex-row justify-center items-center">
-			<div
-				className="w-full md:w-4/6 flex flex-col items-center justify-center text-center
-			 md:text-right h-fit mb-8 px-4 md:px-16"
-			>
-				<h1 className="text-4xl md:text-6xl">{title}</h1>
+			<div className="w-full lg:w-4/6 flex flex-col items-center justify-center text-center md:text-right h-fit mb-8 px-6">
+				<h1 className="text-4xl md:text-5xl  lg:text-6xl">{title}</h1>
 				<p className="p-4 text-lg text-gray-900 ">{description}</p>
-				<div className="flex gap-4 w-full px-6 justify-center md:justify-end">
+				<div className="flex gap-4 w-full px-4 justify-center md:justify-end">
 					{site && (
 						<Link
 							to={`${site}`}
@@ -42,7 +39,7 @@ const CardRight = ({
 					)}
 				</div>
 			</div>
-			<div className="w-5/6 m-20 md:w-4/12 flex justify-center my-16">
+			<div className="w-5/6 lg:m-20 lg:w-4/12 flex justify-center my-16">
 				<div className="shadow-gray-600 shadow-2xl">
 					<Carousel>
 						{slides.map((img) => (
@@ -50,7 +47,7 @@ const CardRight = ({
 								src={img}
 								alt=""
 								key={img.slice(10, 15)}
-								className="rounded-md object-contain"
+								className="rounded-sm object-contain"
 							/>
 						))}
 					</Carousel>

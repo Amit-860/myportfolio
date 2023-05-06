@@ -14,7 +14,7 @@ const Icons = ({
 	const handleClick = () => setTheme((prevTheme) => !prevTheme);
 	return (
 		<div
-			className={`flex gap-3 flex-row items-center mt-1 md:mt-0 md:gap-6 ${optStyles}`}
+			className={`flex gap-3 flex-row justify-end items-center mt-1 md:mt-0 md:gap-6 ${optStyles}`}
 		>
 			<FaLinkedinIn className="md:mt-1 cursor-pointer hover:text-teal-700 w-10 h-10 md:h-6 md:w-6 text-2xl" />
 			<FiGithub className="cursor-pointer md:mt-1 hover:text-teal-700 w-10 h-10 md:h-6 md:w-6 text-2xl" />

@@ -36,14 +36,14 @@ export default function Carousel({
 				<button
 					type="button"
 					onClick={prev}
-					className="px-1 py-4 md:px-2 md:py-6 rounded-md shadow-2xl bg-white/40 text-gray-500 hover:bg-white/60"
+					className="px-1 py-4 md:px-0 md:py-2 rounded-md shadow-2xl bg-white/40 text-gray-500 hover:bg-white/60"
 				>
 					<BsChevronCompactLeft size={40} />
 				</button>
 				<button
 					type="button"
 					onClick={next}
-					className="px-1 py-4 md:px-2 md:py-6 rounded-md shadow-2xl bg-white/40 text-gray-500 hover:bg-white/60"
+					className="px-1 py-4 md:px-0 md:py-2 rounded-md shadow-2xl bg-white/40 text-gray-500 hover:bg-white/60"
 				>
 					<BsChevronCompactRight size={40} />
 				</button>

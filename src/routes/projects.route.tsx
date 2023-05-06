@@ -11,7 +11,7 @@ const slides = [
 
 const Projects = () => {
 	return (
-		<div className="container md:mx-auto -my-6 pb-10 pt-6 md:pt-0 flex flex-col justify-center mb-6">
+		<div className="container lg:px-24 md:mx-auto -my-6 pb-10 px-2 pt-6 md:pt-0 flex flex-col justify-center mb-6">
 			<CardRight
 				{...{
 					slides: slides,
@@ -32,9 +32,7 @@ const Projects = () => {
 					title: "Manage - Team & Product Managment App",
 					description: `Manage - team & product management app, built with React and styled
 					with Tailwind CSS, offers a modern and intuitive interface for teams
-					to collaborate and manage their projects. With its robust features and
-					user-friendly design, it streamlines workflow and helps teams achieve
-					their goals.`,
+					to collaborate and manage their projects.`,
 				}}
 			/>
 		</div>
