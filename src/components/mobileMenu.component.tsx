@@ -50,7 +50,7 @@ const MobileMenu = () => {
 				</>
 			)}
 			<div className="z-50 fixed bottom-10 right-10 h-20 w-20 shadow-black shadow-md bg-gray-950 text-slate-100 text-3xl flex items-center justify-center rounded-full">
-				<Link to="/about">AB</Link>
+				<Link to="/">AB</Link>
 			</div>
 		</div>
 	);

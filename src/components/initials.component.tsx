@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface IInitialsProps {
 	initials: string;
@@ -12,7 +13,7 @@ const Initials = ({ initials, optStyles }: IInitialsProps) => {
 			items-center shadow-black shadow-md hover:border-gray-200 hover:border-2 cursor-pointer hover:text-gray-600
 			hover:bg-slate-100 hover:shadow-gray-400 ${optStyles}`}
 		>
-			{initials}
+			<Link to="/">{initials}</Link>
 		</div>
 	);
 };
