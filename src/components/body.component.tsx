@@ -12,11 +12,11 @@ const Body = () => {
 		<>
 			<div
 				className="md:relative lg:my-auto lg:-mt-3 flex flex-col h-10/12 lg:flex-row md:justify-center
-			 md:items-center mx-6 md:mx-28 lg:mx-32 pb-20 lg:pl-8 lg:pr-32  md:pb-28 lg:pb-0"
+			 md:items-center mx-6 md:mx-28 lg:mx-32 pb-20 lg:pl-8 lg:pr-32  md:pb-28 lg:pb-0 lg:h-[36rem]"
 			>
-				<div className="lg:w-6/12 my-auto">
+				<div className="lg:w-6/12 my-auto ">
 					<img
-						className="z-0 pt-10 md:pt-0 md:mt-0"
+						className="z-0 pt-10 md:pt-0 md:mt-0 lg:min-h-[36rem]"
 						src={profile_img_light}
 						alt="profile_image_light"
 					/>
@@ -24,7 +24,7 @@ const Body = () => {
 				<div className="lg:w-6/12 md:pt-10 flex flex-col justify-center md:items-center lg:items-start mt-10 md:mt-0 md:gap-2 gap-10">
 					<AnimatedText
 						text="Turning Vision into Reality with Code."
-						optStyle="text-5xl text-center lg:text-left lg:text-6xl md:justify-center lg:justify-start"
+						optStyle="text-5xl text-center lg:text-left lg:text-6xl justify-center lg:justify-start"
 					/>
 					<p className="md:mt-4 md:text-lg text-xl text-center lg:text-left">
 						As a full-stack developer, I am dedicated to turing ideas into
